@@ -51,4 +51,6 @@ def format_request_data(**kwargs):
         data['types'] = list_to_str(data['types'])
     if data.get('keywords'):
         data['keywords'] = list_to_str(data['keywords'], ',')
+    if data.get("break_down"):
+        data["break_down"] = list_to_str(data["break_down"], joinstr="+")
     return data
